@@ -18,6 +18,16 @@ npm run build
 npm start
 ```
 
+## GitHub Pages
+
+This repo is configured to deploy to GitHub Pages on pushes to `main`.
+
+- Next.js `next.config.js` uses `output: 'export'`, `images.unoptimized: true`, and sets `basePath`/`assetPrefix` to `/Portfolio` in production.
+- Workflow: `.github/workflows/pages.yml` builds and uploads `out/` and deploys with `actions/deploy-pages`.
+
+After the first push, enable Pages:
+- GitHub → Repository Settings → Pages → Source: GitHub Actions
+
 ## Docker
 
 A simple Dockerfile is provided for self-hosting.
